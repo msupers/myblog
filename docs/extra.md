@@ -1,8 +1,8 @@
-# Extra
+# 额外
 
-## Install pdf2svg
+## 安装 pdf2svg
 
-[The official website of pdf2svg](https://www.cityinthesky.co.uk/opensource/pdf2svg/)
+[pdf2svg 官网](https://www.cityinthesky.co.uk/opensource/pdf2svg/)
 
 - **Mac**
 
@@ -11,29 +11,29 @@ brew install pdf2svg
 ```
 
 - **Windows**  
-  Windows binaries are available from [GitHub](https://github.com/jalios/pdf2svg-windows).  
-  You also need to set the `pdf2svg.exe` to your `$PATH`.
+  Windows 下的可执行文件可以在 [GitHub](https://github.com/jalios/pdf2svg-windows) 找到。  
+  你需要添加 `pdf2svg.exe` 到你的系统路径。
 
 * **Linux**  
-  `pdf2svg` is packaged for various Linux distributions (including Ubuntu and Fedora) and is available via the different package managers.
+  很多 Linux 下的包管理工具都提供 `pdf2svg` 的安装。
 
-## Install LaTeX distribution
+## 安装 LaTeX distribution
 
-Please check [Get LaTeX website](https://www.latex-project.org/get/).  
-[TeX Live](https://www.tug.org/texlive/) is the best recommended to work with Markdown Preview Enhanced.
+请查看 [Get LaTeX 网站](https://www.latex-project.org/get/)。  
+[TeX Live](https://www.tug.org/texlive/) 是推荐的。
 
-For **Mac** user, simply install [MacTex](https://www.tug.org/mactex) and you are done.
+对于 **Mac** 用户，直接安装 [MacTex](https://www.tug.org/mactex) 然后你就没事儿了。
 
-## Modify this website
+## 修改这个网站
 
-This documentation website is powered by [docsify](https://docsify.js.org/#/).  
-To modify this website:
+这个网站基于 [docsify](https://docsify.js.org/#/)。  
+要修改这个网站：
 
 1. `git clone https://github.com/shd101wyy/markdown-preview-enhanced.git`
-2. run the following commands in terminal:
+2. 在终端中运行以下的命令。
 
 ```bash
-# install docsify
+# 安装 docsify
 npm i docsify-cli -g
 
 cd path_to/markdown-preview-enhanced

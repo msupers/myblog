@@ -1,47 +1,48 @@
-# Customize CSS
+# 自定义 CSS
 
 ## style.less
 
-To customize css for your markdown file, <kbd>cmd-shift-p</kbd> then run `Markdown Preview Enhanced: Customize Css` command.
+要自定义 css，<kbd>cmd-shift-p</kbd> 然后运行 `Markdown Preview Enhanced: Customize Css`
 
-The `style.less` file will open, and you can override existing style like this:
+`style.less` 文件将会被打开，然后你就可以开始编写样式了：
 
-> `style.less` file is located at `~/.mume/style.less`
+> `style.less` 文件位于 `~/.mume/style.less`
 
 ```less
 .markdown-preview.markdown-preview {
-  // please write your custom style here
-  // eg:
-  //  color: blue;          // change font color
-  //  font-size: 14px;      // change font size
-  // custom pdf output style
+  // 在这里编写你的样式
+  // 例如：
+  //  color: blue;          // 改变字体颜色
+  //  font-size: 14px;      // 改变字体大小
+  // 自定义 pdf 导出样式
   @media print {
   }
 
-  // custom prince pdf export style
+  // 自定义 prince pdf 导出样式
   &.prince {
   }
 
-  // custom presentation style
+  // 自定义 presentation 样式
   .reveal .slides {
-    // modify all slides
+    // 修改所有幻灯片
   }
 
+  // 自定义 presentation 样式
   .slides > section:nth-child(1) {
-    // this will modify `the first slide`
+    // 修改 `第 1 个幻灯片`
   }
 }
 
 .md-sidebar-toc.md-sidebar-toc {
-  // sidebar TOC style
+  // 边栏目录样式
 }
 ```
 
-## Local style
+## 本地样式
 
-Markdown Preview Enhanced also allows you to define different styles for different markdown files.  
-`id` and `class` can be configured inside front-matter.
-You can [import](file-imports.md) a `less` or `css` file in your markdown file easily:
+Markdown Preview Enhanced 允许你对于不同的 markdown 文件定义不同的样式。
+你可以在 front-matter 设置 markdown 文档的 `id` 和 `class`。
+你可以在你的 markdown 文件中非常简单地 [引用](zh-cn/file-imports.md) `less` 或者 `css` 文件。
 
 ```markdown
 ---
@@ -54,7 +55,7 @@ class: "my-class1 my-class2"
 # Heading1
 ```
 
-the `my-style.less` could look like this:
+`my-style.less` 如下：
 
 ```less
 #my-id {
@@ -72,13 +73,13 @@ the `my-style.less` could look like this:
 }
 ```
 
-Every time you changed your `less` file, you can click the refresh button at the right top corner of the preview to recompile less to css.
+每一次你更新了你的 `less` 文件，你都需要点击 刷新按钮 来重新编译 less 到 css。
 
 ![](https://cloud.githubusercontent.com/assets/1908863/22716917/c7088ae0-ed5d-11e6-8db9-e1ab035a3a2b.png)
 
-## Change the font family
+## 改编字体
 
-To change the font family of preview, you first need to download the font file `(.ttf)`, then modify `style.less` like below:
+要改变你的预览的字体，你需要首先下载字体文件 `(.ttf)`，然后编辑 `style.less` 如下：
 
 ```less
 @font-face {
@@ -102,4 +103,4 @@ To change the font family of preview, you first need to download the font file `
 }
 ```
 
-> However, it is recommended to use online fonts like google fonts.
+> 推荐使用在线的字体，例如从 google fonts 获得。

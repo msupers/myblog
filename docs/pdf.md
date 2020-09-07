@@ -1,17 +1,17 @@
-# PDF export
+# PDF 导出
 
-> We recommend to use [Chrome (Puppeteer) to export PDF](./puppeteer.md).
+> 我们推荐使用 [Chrome (Puppeteer) 来导出 PDF](./puppeteer.md)。
 
-## Usage
+## 使用
 
-Right click at the preview, then choose `Open in Browser`.
-Print as PDF from browser.
+右键点击预览，然后选择 `Open in Browser`。  
+从浏览器中打印为 PDF。
 
 ![screen shot 2017-07-14 at 1 46 39 am](https://user-images.githubusercontent.com/1908863/28201366-536dbc0a-6836-11e7-866f-db9a5d12de16.png)
 
-## Customize CSS
+## 自定义 CSS
 
-<kbd>cmd-shift-p</kbd> then run `Markdown Preview Enhanced: Customize Css` command to open `style.less` file, then add and modify the following lines:
+<kbd>cmd-shift-p</kbd> 然后运行 `Markdown Preview Enhanced: Customize Css` 命令打开 `style.less` 文件后，添加并修改以下的代码：
 
 ```less
 .markdown-preview.markdown-preview {
@@ -23,4 +23,4 @@ Print as PDF from browser.
 
 ---
 
-You can also generate PDF file by [puppeteer](puppeteer.md) or [prince](prince.md).
+你也可以通过 [puppeteer](zh-cn/puppeteer.md) 或者 [prince.md](zh-cn/prince.md) 来生成 PDF 文件。

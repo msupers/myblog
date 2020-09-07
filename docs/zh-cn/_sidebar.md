@@ -5,6 +5,23 @@
   - 安装教程
     - [Atom](zh-cn/installation.md)
     - [VS Code](zh-cn/vscode-installation.md)
+  
+- 工具链
+
+  - Jenkins
+    - [jenkins](zh-cn/jenkins.md)
+    - [gitlab](zh-cn/puppeteer.md)
+    - [jira](zh-cn/pdf.md)
+    - [eBook](zh-cn/ebook.md)
+    - [Prince (PDF)](zh-cn/prince.md)
+  - Pandoc
+    - [PDF](zh-cn/pandoc-pdf.md)
+    - [Word](zh-cn/pandoc-word.md)
+    - [RTF](zh-cn/pandoc-rtf.md)
+    - [Beamer](zh-cn/pandoc-beamer.md)
+    - [Custom](zh-cn/pandoc-custom.md)
+    - [Bibliographies and Citations](zh-cn/pandoc-bibliographies-and-citations.md)
+  - [Markdown (GFM)](zh-cn/markdown.md)
 
 - 编写 Markdown
 
@@ -17,21 +34,7 @@
   - [幻灯片](zh-cn/presentation.md)
   - [Pandoc](zh-cn/pandoc.md)
 
-- 文档导出
 
-  - [HTML](zh-cn/html.md)
-  - [Puppeteer](zh-cn/puppeteer.md)
-  - [PDF](zh-cn/pdf.md)
-  - [eBook](zh-cn/ebook.md)
-  - [Prince (PDF)](zh-cn/prince.md)
-  - Pandoc
-    - [PDF](zh-cn/pandoc-pdf.md)
-    - [Word](zh-cn/pandoc-word.md)
-    - [RTF](zh-cn/pandoc-rtf.md)
-    - [Beamer](zh-cn/pandoc-beamer.md)
-    - [Custom](zh-cn/pandoc-custom.md)
-    - [Bibliographies and Citations](zh-cn/pandoc-bibliographies-and-citations.md)
-  - [Markdown (GFM)](zh-cn/markdown.md)
 
 - 定制 & 扩展
 

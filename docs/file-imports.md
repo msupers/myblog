@@ -1,85 +1,86 @@
-# Import external files
+# 导入外部文件
 
 ![doc-imports](https://cloud.githubusercontent.com/assets/1908863/22716507/f352a4b6-ed5b-11e6-9bac-88837f111de0.gif)
 
-## How to use?
+## 咋使呢？
 
-just
+仅仅
 
-`@import "your_file"`
+`@import "你的文件"`
 
-easy, right :)
+就可以了，很简单对吧～ <code>d(\`･∀･)b</code>
 
-`<!-- @import "your_file" -->` is also valid.
+`<!-- @import "your_file" -->` 的写法也是支持的。
 
-## Refresh button
+## 刷新按钮
 
-Refresh button is now added at the right corner of preview.
-Clicking it will clear file caches and refresh the preview.
-It could be useful if you want to clear image cache. [#144](https://github.com/shd101wyy/markdown-preview-enhanced/issues/144) [#249](https://github.com/shd101wyy/markdown-preview-enhanced/issues/249)
+刷新按钮可以在你的预览右上角找到。
+点击它将会清空文件缓存并且刷新预览。
+这个功能将会十分有用如果你想要清除图片缓存 [#144](https://github.com/shd101wyy/markdown-preview-enhanced/issues/144) [#249](https://github.com/shd101wyy/markdown-preview-enhanced/issues/249)。
 
 ![screen shot 2017-02-07 at 5 48 52 pm](https://cloud.githubusercontent.com/assets/1908863/22716917/c7088ae0-ed5d-11e6-8db9-e1ab035a3a2b.png)
 
-## Supported file types
+## 支持的文件类型
 
-- `.jpeg(.jpg), .gif, .png, .apng, .svg, .bmp` file will be treated as markdown image.
-- `.csv` file will be converted to markdown table.
-- `.mermaid` file will be rendered by mermaid.
-- `.dot` file will be rendered by viz.js (graphviz).
-- `.plantuml(.puml)` file will be rendered by PlantUML.
-- `.html` file will be embedded directly.
-- `.js` file will be included as `<script src="your_js"></script>`.
-- `.less` and `.css` file will be included as style. Only local `less` file is currently supported. `.css` file will be included as `<link rel="stylesheet" href="your_css">`.
-- `.pdf` file will be converted to `svg` files by `pdf2svg` and then be included.
-- `markdown` file will be parsed and embedded directly.
-- All other files will be rendered as code block.
+- `.jpeg(.jpg), .gif, .png, .apng, .svg, .bmp` 文件将会直接被当作 markdown 图片被引用。
+- `.csv` 文件将会被转换成 markdown 表格。
+- `.mermaid` 将会被 mermaid 渲染。
+- `.dot` 文件将会被 viz.js (graphviz) 渲染。
+- `.plantuml(.puml)` 文件将会被 PlantUML 渲染。
+- `.html` 将会直接被引入。
+- `.js` 将会被引用为 `<script src="你的 js 文件"></script>`。
+- `.less` 和 `.css` 将会被引用为 style。目前 `less` 只支持本地文件。`.css` 文件将会被引用为 `<link rel="stylesheet" href="你的 css 文件">`。
+- `.pdf` 文件将会被 `pdf2svg` 转换为 `svg` 然后被引用。
+- `markdown` 将会被分析处理然后被引用。
+- 其他所有的文件都将被视为代码块。
 
-## Configure images
+## 设置图片
 
 ```markdown
-@import "test.png" {width="300px" height="200px" title="my title" alt="my alt"}
+@import "test.png" {width="300px" height="200px" title="图片的标题" alt="我的 alt"}
 ```
 
-## Import online files
+## 引用在线文件
 
-For example:
+例如：
 
 ```markdown
 @import "https://raw.githubusercontent.com/shd101wyy/markdown-preview-enhanced/master/LICENSE.md"
 ```
 
-## Import PDF file
+## 引用 PDF 文件
 
-To import PDF file, you need to have [pdf2svg](extra.md) installed.
-Markdown Preview Enhanced supports importing both local and online PDF files.
-However, it is not recommended to import large PDF files.
-For example:
+如果你要引用 PDF 文件，你需要事先安装好 [pdf2svg](zh-cn/extra.md)。
+Markdown Preview Enhanced 支持引用本地或者在线的 PDF 文件。
+但是，引用大的 PDF 文件是不推荐的。
+
+例如：
 
 ```markdown
 @import "test.pdf"
 ```
 
-### PDF configuration
+### PDF 设置
 
 - **page_no**
-  Display the `nth` page of PDF. 1-based indexing. For example `{page_no=1}` will display the 1st page of pdf.
+  显示第 `nth` 页。例如 `{page_no=1}` 将会只显示 PDF 文件的第 1 页。
 - **page_begin**, **page_end**
-  Inclusive. For example `{page_begin=2 page_end=4}` will display the number 2, 3, 4 pages.
+  包含的。例如 `{page_begin=2 page_end=4}` 将会显示第 2，3，4 页。
 
-## Force to render as Code Block
+## 强制渲染为代码块
 
 ```markdown
 @import "test.puml" {code_block=true class="line-numbers"}
 @import "test.py" {class="line-numbers"}
 ```
 
-## As Code Block
+## As（作为）代码块
 
 ```markdown
 @import "test.json" {as="vega-lite"}
 ```
 
-## Import certain lines
+## 导入特定行数
 
 ```markdown
 @import "test.md" {line_begin=2}
@@ -87,10 +88,10 @@ For example:
 @import "test.md" {line_end=-4}
 ```
 
-## Import file as Code Chunk
+## 引用文件作为 Code Chunk
 
 ```markdown
 @import "test.py" {cmd="python3"}
 ```
 
-[➔ Code Chunk](code-chunk.md)
+[➔ Code Chunk](zh-cn/code-chunk.md)

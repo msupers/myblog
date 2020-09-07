@@ -1,11 +1,11 @@
-# Custom Document
+# Custom 文档
 
-## Overview
+## 概览
 
-**Custom Document** grants you the ability to fully utilize the power of `pandoc`.  
-To create a custom document, you need to specify `custom_document` output format in the front-matter of your document, **and** `path` **has to be defined**.
+**Custom Document** 给予你 `pandoc` 的所有力量。  
+创建自定义文档，你需要在 markdown 文件中的 front-matter 里声明 `custom_document` 的输出类型，并且 `path` 项是**必须**被定义的：
 
-The code example below will behave similarly as [pdf document](./pdf.md).
+下面的是一个展示了类似于 [PDF 文档导出](zh-cn/pandoc-pdf.md) 的例子：
 
 ```yaml
 ---
@@ -20,7 +20,7 @@ output:
 
 ```
 
-The code example below will behave similarly as [beamer presentation](./beamer.md).
+下面的是一个展示了类似于 [beamer presentation](zh-cn/pandoc-beamer.md) 的例子：
 
 ```yaml
 ---
@@ -53,7 +53,7 @@ output:
 
 ## Shared Options
 
-If you want to specify a set of default options to be shared by multiple documents within a directory you can include a file named `_output.yaml` within the directory. Note that no YAML delimiters or enclosing output object are used in this file. For example:
+If you want to specify a set of default options to be shared by multiple documents within a directory you can include a file named `_output.yaml` within the directory. Note that no YAML delimeters or enclosing output object are used in this file. For example:
 
 **\_output.yaml**
 

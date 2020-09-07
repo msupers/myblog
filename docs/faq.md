@@ -1,18 +1,16 @@
 # FAQ
 
-1. **I am not able to find this package in atom?**  
-   Please search for the full name of this package. `markdown-preview-enhanced`
-
-2. **I exported a html file, and I want to deploy it on my own remote server. But math typesetting (MathJax or KaTeX) doesn't work, what should I do?**  
-   Please make sure you have `Use CDN hosted resources` checked when exporting.
-3. **I exported a presentation html file, and I want to put it on my Github Page or deploy remotely?**  
-   Please check the last question.
-4. **How do I get dark style preview?**  
-   If you want the style of the preview to be consistent with your atom editor, go to settings of this package, then change the `Preview Theme`.  
-   Or you can run `Markdown Preview Enhanced: Customize Css` command, then modify the `style.less` file. [#68](https://github.com/shd101wyy/markdown-preview-enhanced/issues/68), [#89](https://github.com/shd101wyy/markdown-preview-enhanced/issues/89).
-5. **The preview is super super lagging?**  
-   This might happen when your markdown file is too big, or you are writing too many math or graphs.  
-   Therefore I would like to recommend you to disable `Live Update` functionality.  
-   You can run `Markdown Preview Enhanced: Toggle Live Update` to disable it.
-6. **Keyboard Shortcut doesn't work?**  
-   <kbd>cmd-shift-p</kbd> then choose `Key Binding Resolver: Toggle`. Check if there is keybinding conflicts, or post an issue on GitHub.
+1. **在 atom 的插件市场中找不到这个插件啊？**  
+   请搜索全称 `markdown-preview-enhanced`。[#269](https://github.com/shd101wyy/markdown-preview-enhanced/issues/269)。
+1. **我导出了一个 html 文件，想把它放到我的服务器上。但是数学符号等不能正确显示，该怎么办？**  
+   请确定导出 html 文件的时候，`Use CDN hosted resources` 这一选项勾上了。
+1. **我导出了一个 presentation 的 html 文件，想把它放到我的服务器上，但是无法正确显示？**  
+   请参考上一个问题。
+1. **我想用黑色的预览主题，该怎么做？**  
+   如果你想要你的预览和你的 atom 编辑器风格颜色一致，你可以到该插件的设置中，更改 `Preview Theme` 项。  
+   还有一种方法是运行 `Markdown Preview Enhanced: Customize Css` 命令，然后修改 `style.less` 文件。[#68](https://github.com/shd101wyy/markdown-preview-enhanced/issues/68)，[#89](https://github.com/shd101wyy/markdown-preview-enhanced/issues/89)。
+1. **预览特别特别卡，该怎么做？**  
+   如果你的预览特别卡，那么可能是你的文件太大了，或者用到的数学式，画的图过多。  
+   这里我建议关闭 `Live Update` 的功能。可以运行 `Markdown Preview Enhanced: Toggle Live Update` 来关闭（disable）。然后预览就只会在你保存文件的时候刷新了，这样就不会卡了。
+1. **快捷键没用啊？**  
+   <kbd>cmd-shift-p</kbd> 然后选择 `Key Binding Resolver: Toggle`。查看一下有没有快捷键冲突，或者直接给我发个 issue／

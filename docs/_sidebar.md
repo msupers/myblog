@@ -1,53 +1,39 @@
-- Getting Started
+- 开始
 
-  - [Introduction](/)
-  - [Usages](usages.md)
-  - Installation
-    - [Atom](installation.md)
-    - [VS Code](vscode-installation.md)
+  - [简介](zh-cn/)
 
-- Writing Markdown
+- 文档导出
 
-  - [Markdown Basics](markdown-basics.md)
-  - [Math Typesetting](math.md)
-  - [Diagrams](diagrams.md)
-  - [TOC](toc.md)
-  - [File Imports](file-imports.md)
-  - [Code Chunk](code-chunk.md)
-  - [Presentation](presentation.md)
-  - [Pandoc](pandoc.md)
-
-- Document Export
-
-  - [HTML](html.md)
-  - [Puppeteer](puppeteer.md)
-  - [PDF](pdf.md)
-  - [eBook](ebook.md)
-  - [Prince (PDF)](prince.md)
+  - [HTML](zh-cn/html.md)
+  - [Puppeteer](zh-cn/puppeteer.md)
+  - [PDF](zh-cn/pdf.md)
+  - [eBook](zh-cn/ebook.md)
+  - [Prince (PDF)](zh-cn/prince.md)
   - Pandoc
-    - [PDF](pandoc-pdf.md)
-    - [Word](pandoc-word.md)
-    - [RTF](pandoc-rtf.md)
-    - [Beamer](pandoc-beamer.md)
-    - [Custom](pandoc-custom.md)
-    - [Bibliographies and Citations](pandoc-bibliographies-and-citations.md)
-  - [Markdown (GFM)](markdown.md)
+    - [PDF](zh-cn/pandoc-pdf.md)
+    - [Word](zh-cn/pandoc-word.md)
+    - [RTF](zh-cn/pandoc-rtf.md)
+    - [Beamer](zh-cn/pandoc-beamer.md)
+    - [Custom](zh-cn/pandoc-custom.md)
+    - [Bibliographies and Citations](zh-cn/pandoc-bibliographies-and-citations.md)
+  - [Markdown (GFM)](zh-cn/markdown.md)
 
-- Customization & Extension
+- 编写 Markdown
 
-  - [Customize CSS](customize-css.md)
-  - [Extend Markdown Parser](extend-parser.md)
-  - [Image Helper](image-helper.md)
-  - [For Developer](developer.md)
+  - [Markdown 基本要素](zh-cn/markdown-basics.md)
+  - [数学](zh-cn/math.md)
+  - [图像](zh-cn/diagrams.md)
+  - [TOC](zh-cn/toc.md)
+  - [导入文件](zh-cn/file-imports.md)
+  - [Code Chunk](zh-cn/code-chunk.md)
+  - [幻灯片](zh-cn/presentation.md)
+  - [Pandoc](zh-cn/pandoc.md)
 
-- Credits
-  - [Backers](backers.md)
-  - [Thanks](thanks.md)
-- [Extra](extra.md)
-- [FAQ](faq.md)
 - Changelog
+
   - Atom
     - [Newest](newest.md)
     - [History](history.md)
   - [VS Code](https://github.com/shd101wyy/vscode-markdown-preview-enhanced/releases)
+
 - [License](LICENSE.md)

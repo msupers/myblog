@@ -1,18 +1,18 @@
-# Presentation Writer
+# 幻灯片制作
 
 ![screen shot 2017-07-14 at 12 33 14 pm](https://user-images.githubusercontent.com/1908863/28223480-2c61461c-6891-11e7-9389-5adec0588c32.png)
 
-Markdown Preview Enhanced uses [reveal.js](https://github.com/hakimel/reveal.js) to render beautiful presentations.
+Markdown Preview Enhanced 使用 [reveal.js](https://github.com/hakimel/reveal.js) 来渲染漂亮的幻灯片。
 
-[Click here](https://rawgit.com/shd101wyy/markdown-preview-enhanced/master/docs/presentation-intro.html) to see the introduction (**Recommended**).
+[点击这里](https://rawgit.com/shd101wyy/markdown-preview-enhanced/master/docs/presentation-intro.html) 查看相关的介绍。
 
 ![presentation](https://user-images.githubusercontent.com/1908863/28202176-caf103c4-6839-11e7-8776-942679f3698b.gif)
 
 ## Presentation Front-Matter
 
-You can configure your presentation by adding front-matter to your markdown file.  
-You need to write your settings under `presentation` section.  
-For example:
+你可以通过 `front-matter` 来设置你的幻灯片。  
+你需要将你的设置写在 `presentation` 部分下。  
+例如：
 
 ```markdown
 ---
@@ -23,18 +23,18 @@ presentation:
 
 <!-- slide -->
 
-Your slides goes here...
+在这里编写你的幻灯片。。。
 ```
 
-The presentation above will has size `800x600`
+这个幻灯片将会拥有 `800x600` 的大小。
 
-### Settings
+### 设置
 
 ```yaml
 ---
 presentation:
-  # presentation theme
-  # === available themes ===
+  # presentation 主题
+  # === 可选的主题 ===
   # "beige.css"
   # "black.css"
   # "blood.css"
@@ -162,32 +162,33 @@ presentation:
   parallaxBackgroundHorizontal: 200
   parallaxBackgroundVertical: 50
 
-  # Enable Speaker Notes
+  # Enable Speake Notes
   enableSpeakerNotes: false
 ---
 ```
 
-## Customize Slide Style
+## 自定义幻灯片样式
 
-You can add `id` and `class` to a specific slide like this:
+你可以添加 `id` 以及 `class` 到一个特定的幻灯片：
 
 ```markdown
 <!-- slide id="my-id" class="my-class1 my-class2" -->
 ```
 
-Or if you only want to customize `nth` slide, modify your `less` file like this:
+或者你也可以自定义第 `nth` 个幻灯片，编写你的 `less` 如下：
 
 ```less
 .markdown-preview.markdown-preview {
-  // custom presentation style
+  // 自定义 presentation 样式
   .reveal .slides {
-    // modify all slides
+    // 修改所有幻灯片
   }
 
+  // 自定义 presentation 样式
   .slides > section:nth-child(1) {
-    // this will modify `the first slide`
+    // 修改 `第 1 个幻灯片`
   }
 }
 ```
 
-[➔ Pandoc](pandoc.md)
+[➔ Pandoc](zh-cn/pandoc.md)

@@ -1,16 +1,16 @@
-# Installation on VS Code
+# VS Code 版本安装教程
 
-There are several ways of installing this package.
+这里有如下方式安装此插件：
 
-## Install from VS Code (Recommended)
+## 通过 VS Code 安装（推荐）
 
-Open **vscode** editor, then search `markdown-preview-enhanced` in `Extensions`, then click `Install` button.
+打开 **vscode** 编辑器，在插件页搜索 `markdown-preview-enhanced`，接着点击 `Install` 按钮。
 
 ![screen shot 2017-07-14 at 12 23 32 am](https://user-images.githubusercontent.com/1908863/28199365-bb03a570-682a-11e7-8f65-d7d2b258d583.png)
 
-## Install from GitHub
+## 通过 GitHub 安装
 
-- Download `markdown-preview-enhanced-*.vsix` file from [Releases](https://github.com/shd101wyy/vscode-markdown-preview-enhanced/releases).
-- Open **vscode**, run `Extension: Install from VSIX`, then choose the `*.vsix` file you just downloaded.
+- 从 [Releases](https://github.com/shd101wyy/vscode-markdown-preview-enhanced/releases) 下载 `markdown-preview-enhanced-*.vsix` 文件。
+- 打开 **vscode**，运行 `Extension: Install from VSIX` 命令，然后选择你刚刚下载好的 `*.vsix` 文件。
 
-[➔ Usages](usages.md)
+[➔ 使用](zh-cn/usages.md)

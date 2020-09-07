@@ -1,57 +1,57 @@
-# Markdown Basics
+# Markdown 基本要素
 
-This article is a brief introduction to [GitHub Flavored Markdown writing](https://guides.github.com/features/mastering-markdown/).
+这篇文件意在简要介绍 [GitHub Flavored Markdown 写作](https://guides.github.com/features/mastering-markdown/)。
 
-## What is Markdown?
+## 什么是 Markdown?
 
-`Markdown` is a way to style text on the web. You control the display of the document; formatting words as bold or italic, adding images, and creating lists are just a few of the things we can do with Markdown. Mostly, Markdown is just regular text with a few non-alphabetic characters thrown in, like `#` or `*`.
+`Markdown` 是一种文本格式。你可以用它来控制文档的显示。使用 markdown，你可以创建粗体的文字，斜体的文字，添加图片，并且创建列表 等等。基本上来讲，Markdown 就是普通的文字加上 `#` 或者 `*` 等符号。
 
-## Syntax guide
+## 语法说明
 
-### Headers
-
-```markdown
-# This is an <h1> tag
-
-## This is an <h2> tag
-
-### This is an <h3> tag
-
-#### This is an <h4> tag
-
-##### This is an <h5> tag
-
-###### This is an <h6> tag
-```
-
-If you want to add `id` and `class` to the header, then simply append `{#id .class1 .class2}`. For example:
+### 标题
 
 ```markdown
-# This heading has 1 id {#my_id}
+# 这是 <h1> 一级标题
 
-# This heading has 2 classes {.class1 .class2}
+## 这是 <h2> 二级标题
+
+### 这是 <h3> 三级标题
+
+#### 这是 <h4> 四级标题
+
+##### 这是 <h5> 五级标题
+
+###### 这是 <h6> 六级标题
 ```
 
-> This is a MPE extended feature.
+如果你想要给你的标题添加 `id` 或者 `class`，请在标题最后添加 `{#id .class1 .class2}`。例如：
 
-### Emphasis
+```markdown
+# 这个标题拥有 1 个 id {#my_id}
+
+# 这个标题有 2 个 classes {.class1 .class2}
+```
+
+> 这是一个 MPE 扩展的特性。
+
+### 强调
 
 <!-- prettier-ignore -->
 ```markdown
-*This text will be italic*
-_This will also be italic_
+*这会是 斜体 的文字*
+_这会是 斜体 的文字_
 
-**This text will be bold**
-__This will also be bold__
+**这会是 粗体 的文字**
+__这会是 粗体 的文字__
 
-_You **can** combine them_
+_你也 **组合** 这些符号_
 
-~~This text will be strikethrough~~
+~~这个文字将会被横线删除~~
 ```
 
-### Lists
+### 列表
 
-#### Unordered List
+#### 无序列表
 
 ```markdown
 - Item 1
@@ -60,7 +60,7 @@ _You **can** combine them_
   - Item 2b
 ```
 
-#### Ordered List
+#### 有序列表
 
 ```markdown
 1. Item 1
@@ -70,63 +70,63 @@ _You **can** combine them_
    1. Item 3b
 ```
 
-### Images
+### 添加图片
 
 ```markdown
 ![GitHub Logo](/images/logo.png)
 Format: ![Alt Text](url)
 ```
 
-### Links
+### 链接
 
 ```markdown
-https://github.com - automatic!
+https://github.com - 自动生成！
 [GitHub](https://github.com)
 ```
 
-### Blockquote
+### 引用
 
 ```markdown
-As Kanye West said:
+正如 Kanye West 所说：
 
 > We're living the future so
 > the present is our past.
 ```
 
-### Horizontal Rule
+### 分割线
 
 ```markdown
-Three or more...
+如下，三个或者更多的
 
 ---
 
-Hyphens
+连字符
 
 ---
 
-Asterisks
+星号
 
 ---
 
-Underscores
+下划线
 ```
 
-### Inline code
+### 行内代码
 
 ```markdown
-I think you should use an
-`<addr>` element here instead.
+我觉得你应该在这里使用
+`<addr>` 才对。
 ```
 
-### Fenced code block
+### 代码块
 
-You can create fenced code blocks by placing triple backticks <code>\`\`\`</code> before and after the code block.
+你可以在你的代码上面和下面添加 <code>\`\`\`</code> 来表示代码块。
 
-#### Syntax Highlighting
+#### 语法高亮
 
-You can add an optional language identifier to enable syntax highlighting in your fenced code block.
+你可以给你的代码块添加任何一种语言的语法高亮
 
-For example, to syntax highlight Ruby code:
+例如，给 ruby 代码添加语法高亮：
 
     ```ruby
     require 'redcarpet'
@@ -134,17 +134,19 @@ For example, to syntax highlight Ruby code:
     puts markdown.to_html
     ```
 
+会得到下面的效果：
+
 ```ruby
 require 'redcarpet'
 markdown = Redcarpet.new("Hello World!")
 puts markdown.to_html
 ```
 
-#### Code block class (MPE extended feature)
+#### 代码块 class（MPE 扩展的特性）
 
-You can set `class` for your code blocks.
+你可以给你的代码块设置 `class`。
 
-For example, to add `class1 class2` to a code block
+例如，添加 `class1 class2` 到一个 代码块：
 
     ```javascript {.class1 .class}
     function add(x, y) {
@@ -152,25 +154,25 @@ For example, to add `class1 class2` to a code block
     }
     ```
 
-##### line-numbers
+##### 代码行数
 
-You can enable line number for a code block by adding `line-numbers` class.
+如果你想要你的代码块显示代码行数，只要添加 `line-numbers` class 就可以了。
 
-For example:
+例如：
 
-````markdown
-```javascript {.line-numbers}
-function add(x, y) {
-  return x + y;
-}
-```
-````
+    ```javascript {.line-numbers}
+    function add(x, y) {
+      return x + y
+    }
+    ```
+
+将会得到下面的显示效果：
 
 ![screen shot 2017-07-14 at 1 20 27 am](https://user-images.githubusercontent.com/1908863/28200587-a8582b0a-6832-11e7-83a7-6c3bb011322f.png)
 
-##### highlighting rows
+##### 高亮代码行数
 
-You can highlight rows by add `highlight` attribute:
+你可以通过添加 `highlight` 属性的方式来高亮代码行数：
 
 ````markdown
 ```javascript {highlight=10}
@@ -183,7 +185,7 @@ You can highlight rows by add `highlight` attribute:
 ```
 ````
 
-### Task lists
+### 任务列表
 
 ```markdown
 - [x] @mentions, #refs, [links](), **formatting**, and <del>tags</del> supported
@@ -192,9 +194,7 @@ You can highlight rows by add `highlight` attribute:
 - [ ] this is an incomplete item
 ```
 
-### Tables
-
-You can create tables by assembling a list of words and dividing them with hyphens `-` (for the first row), and then separating each column with a pipe `|`:
+### 表格
 
 <!-- prettier-ignore -->
 ```markdown
@@ -204,37 +204,37 @@ Content from cell 1 | Content from cell 2
 Content in the first column | Content in the second column
 ```
 
-## Extended syntax
+## 扩展的语法
 
-### Table
+### 表格
 
-> Need to enable `enableExtendedTableSyntax` in extension settings to get it work.
+> 需要在插件设置中打开 `enableExtendedTableSyntax` 选项来使其工作。
 
 ![screen shot 2017-07-15 at 8 16 45 pm](https://user-images.githubusercontent.com/1908863/28243710-945e3004-699a-11e7-9a5f-d74f6c944c3b.png)
 
 ### Emoji & Font-Awesome
 
-> This only works for `markdown-it parser` but not `pandoc parser`.  
-> Enabled by default. You can disable it from the package settings.
+> 只适用于 `markdown-it parser` 而不适用于 `pandoc parser`。  
+> 缺省下是启用的。你可以在插件设置里禁用此功能。
 
 ```
 :smile:
 :fa-car:
 ```
 
-### Superscript
+### 上标
 
 ```markdown
 30^th^
 ```
 
-### Subscript
+### 下标
 
 ```markdown
 H~2~O
 ```
 
-### Footnotes
+### 脚注
 
 ```markdown
 Content [^1]
@@ -242,7 +242,7 @@ Content [^1]
 [^1]: Hi! This is a footnote
 ```
 
-### Abbreviation
+### 缩略
 
 ```markdown
 _[HTML]: Hyper Text Markup Language
@@ -251,7 +251,7 @@ The HTML specification
 is maintained by the W3C.
 ```
 
-### Mark
+### 标记
 
 ```markdown
 ==marked==
@@ -259,22 +259,22 @@ is maintained by the W3C.
 
 ### CriticMarkup
 
-CriticMarkup is **disabled** by default, but you can enable it from the package settings.  
-For more information about CriticMarkup, check [CriticMarkup User's Guide](https://criticmarkup.com/users-guide.php).
+CriticMarkup 缺省是禁用的，你可以通过插件设置来启动它。  
+有关 CriticMarkup 的更多信息，请查看 [CriticMarkup 用户指南](https://criticmarkup.com/users-guide.php).
 
-There are five types of Critic marks:
+这里有 5 种基本语法：
 
-- Addition `{++ ++}`
-- Deletion `{-- --}`
-- Substitution `{~~ ~> ~~}`
-- Comment `{>> <<}`
-- Highlight `{== ==}{>> <<}`
+- 添加 `{++ ++}`
+- 删除 `{-- --}`
+- 替换 `{~~ ~> ~~}`
+- 注释 `{>> <<}`
+- 高亮 `{== ==}{>> <<}`
 
-> CriticMarkup only works with the markdown-it parser, but not the pandoc parser.
+> CriticMarkup 仅可用于 markdown-it parser，不与 pandoc parser 兼容。
 
-## References
+## 参考
 
 - [Mastering Markdown](https://guides.github.com/features/mastering-markdown/)
 - [Daring Fireball: Markdown Basics](https://daringfireball.net/projects/markdown/basics)
 
-[➔ Math](math.md)
+[➔ 数学](zh-cn/math.md)

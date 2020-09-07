@@ -1,35 +1,35 @@
-# Prince PDF Export
+# Prince PDF 导出
 
-**Markdown Preview Enhanced** supports [prince](https://www.princexml.com/) pdf export.
+**Markdown Preview Enhanced** 支持 [prince](https://www.princexml.com/) pdf 文档导出。
 
-## Installation
+## 安装
 
-You need to have [prince](https://www.princexml.com/) installed.
-For `macOS`, open terminal and run the following command:
+你需要事先安装好 [prince](https://www.princexml.com/)。  
+对于 `macOS`，打开 terminal 终端然后运行一下命令：
 
 ```sh
 brew install Caskroom/cask/prince
 ```
 
-## Usage
+## 使用
 
-Right click at the preview, then choose `PDF (prince)`.
+右键点击预览，然后选择 `PDF (prince)`。
 
 ![screen shot 2017-07-14 at 1 44 23 am](https://user-images.githubusercontent.com/1908863/28201287-fb5ea8d0-6835-11e7-9bdb-2afb458ee5cc.png)
 
-## Customize CSS
+## 自定义 CSS
 
-<kbd>cmd-shift-p</kbd> then run `Markdown Preview Enhanced: Customize Css` command to open `style.less` file, then add and modify the following lines:
+<kbd>cmd-shift-p</kbd> 然后运行 `Markdown Preview Enhanced: Customize Css` 命令，添加以下的代码：
 
 ```less
 .markdown-preview.markdown-preview {
   &.prince {
-    // your prince css here
+    // 你的 prince css
   }
 }
 ```
 
-For example, to change the page size to `A4 landscape`:
+例如，改变纸张大小到 `A4 landscape`:
 
 ```less
 .markdown-preview.markdown-preview {
@@ -41,12 +41,12 @@ For example, to change the page size to `A4 landscape`:
 }
 ```
 
-More information can be found at [prince user guide](https://www.princexml.com/doc/).
-Especially [page styles](https://www.princexml.com/doc/paged/#page-styles).
+更多信息请查看 [prince 用户指南](https://www.princexml.com/doc/)。  
+特别是 [page 样式](https://www.princexml.com/doc/paged/#page-styles)。
 
-## Export on save
+## 保存时自动导出
 
-Add the front-matter like below:
+添加 front-matter 如下：
 
 ```yaml
 ---
@@ -56,8 +56,8 @@ export_on_save:
 
 ```
 
-So the PDF file will be generated every time you save your markdown source file.
+这样每次当你保存你的 markdown 文件时，Prince 将会自动运行生成 PDF 文件。
 
-## Known issues
+## 已知问题
 
-- Doesn't work with `KaTeX` and `MathJax`.
+- `KaTeX` 和 `MathJax` 无法工作。

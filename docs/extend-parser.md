@@ -1,9 +1,9 @@
-# Extend Markdown Parser
+# 扩展 Markdown Parser
 
-Run `Markdown Preview Enhanced: Extend Parser` command.  
-Then edit the `parser.js` file.
+运行 `Markdown Preview Enhanced: Extend Parser` 命令。  
+然后 `parser.js` 文件。
 
-> `parser.js` file is located at `~/.mume/parser.js`
+> `parser.js` 文件位于 `~/.mume/parser.js`
 
 ```javascript
 module.exports = {
@@ -20,7 +20,7 @@ module.exports = {
 };
 ```
 
-For example, if you want to prepend `😀` to every headers, then just edit `onWillParseMarkdown` like this:
+例如，你想在每个标题前添加 `😀` ，那么你需要编辑 `onWillParseMarkdown` 如下：
 
 ```javascript
 module.exports = {
@@ -35,7 +35,7 @@ module.exports = {
 
 ![screen shot 2017-07-14 at 1 04 19 am](https://user-images.githubusercontent.com/1908863/28200243-78e1a10a-6830-11e7-836b-2defc528ee07.png)
 
-For example, if you want to use `<div class="mermaid"></div>` for mermaid graph.
+再例如，你想要使用 `<div class="mermaid"></div>` 的写法来渲染 `mermaid` 图形。
 
 ```javascript
 module.exports = {

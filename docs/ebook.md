@@ -1,32 +1,33 @@
-# eBook generation
+# eBook 导出
 
 Inspired by _GitBook_  
-**Markdown Preview Enhanced** can output content as ebook (ePub, Mobi, PDF).
+**Markdown Preview Enhanced** 可以导出 ePub，Mobi，PDF 的电子书。
 
 ![Screen Shot 2016-09-08 at 9.42.43 PM](https://ooo.0o0.ooo/2016/09/09/57d221c0a618a.png)
 
-To generate ebook, you need to have `ebook-convert` installed.
+要导出电子书，你需要事先安装好 `ebook-convert`。
 
-## Installing ebook-convert
+## 安装 ebook-convert
 
 **macOS**  
-Download the [Calibre Application](https://calibre-ebook.com/download). After moving the `calibre.app` to your Applications folder, create a symbolic link to the `ebook-convert` tool:
+下载 [Calibre](https://calibre-ebook.com/download)。  
+在将 `calibre.app` 添加到你的 Applications 添加一个 symbolic link 到 `ebook-convert` 工具：
 
 ```shell
 $ sudo ln -s ~/Applications/calibre.app/Contents/MacOS/ebook-convert /usr/local/bin
 ```
 
 **Windows**  
-Download and Install the [Calibre Application](https://calibre-ebook.com/download).  
-Add `ebook-convert` to your `$PATH`.
+下载并安装 [Calibre Application](https://calibre-ebook.com/download)。  
+添加 `ebook-convert` 到你的系统路径。
 
-## eBook Example
+## eBook 例子
 
-An eBook example project can be found [here](https://github.com/shd101wyy/ebook-example).
+一个电子书项目的例子可以查看 [这里](https://github.com/shd101wyy/ebook-example)。
 
-## Start writing eBook
+## 开始编写 eBook
 
-You can set up a ebook configuration by simply adding `ebook front-matter` into your markdown file.
+你可以在你的 markdown 文件中添加 `ebook front-matter` 来设置你的电子书。
 
 ```yaml
 ---
@@ -42,7 +43,7 @@ ebook:
 
 ## Demo
 
-`SUMMARY.md` is a sample entry file. It should also have a TOC to help organize the book:
+`SUMMARY.md` 是一个**主文件**。他应该拥有一个 目录（TOC）来帮忙组织书的结构：
 
 ```markdown
 ---
@@ -52,59 +53,57 @@ ebook:
   author: shd101wyy
 ---
 
-# Preface
+# 前言
 
-This is the preface, but not necessary.
+这个是前言，但是不是必须的。
 
-# Table of Contents
+# 目录
 
-- [Chapter 1](/chapter1/README.md)
-  - [Introduction of Markdown Preview Enhanced](/chapter1/intro.md)
-  - [Features](/chapter1/feature.md)
-- [Chapter 2](/chapter2/README.md)
-  - [Known issues](/chapter2/issues.md)
+- [章 1](/chapter1/README.md)
+  - [Markdown Preview Enhanced 的介绍](/chapter1/intro.md)
+  - [特性](/chapter1/feature.md)
+- [章 2](/chapter2/README.md)
+  - [已知问题](/chapter2/issues.md)
 ```
 
-The last list in the markdown file is regarded as TOC.
-
-The link's title is used as the chapter's title, and the link's target is a path to that chapter's file.
+一般来讲，最后一个列表会被视为目录（TOC）。
 
 ---
 
-To export ebook, open the `SUMMARY.md` with the preview opened. Then right click at the preview, choose `Export to Disk`, then choose `EBOOK` option. You can then export your ebook.
+如果你要导出一个电子书，打开你的主文件预览，例如上面提到的 `SUMMARY.md`。然后右键点击预览，选择 `Export to Disk`，然后选择 `EBOOK` 选项。接着你就可以导出你的电子书了。
 
 ### Metadata
 
 - **theme**
-  the theme to use for eBook, by default it will use the preview theme. The list of available themes could be found at `previewTheme` section in [this doc](https://github.com/shd101wyy/mume/#markdown-engine-configuration).
+  电子书的渲染主题。默认是使用预览的主题。主题列表可以在[这个文档](https://github.com/shd101wyy/mume/#markdown-engine-configuration)中的 `previewTheme` 部分找到。
 - **title**  
-  title of your book
+  你的书的标题
 - **authors**  
-  author1 & author2 & ...
+  作者 1 & 作者 2 & ...
 - **cover**  
   https://path-to-image.png
 - **comments**  
-  Set the ebook description
+  关于这本书的描述
 - **publisher**  
-  who is the publisher?
+  发行商是谁？
 - **book-producer**  
-  who is the book producer
+  制作商是谁？
 - **pubdate**  
-  publish date
+  发布日期
 - **language**  
-  Set the language
+  语言
 - **isbn**  
-  ISBN of the book
+  书的 ISBN
 - **tags**  
-  Set the tags for the book. Should be a comma separated list.
+  输的标签。应该用英文 `,` 隔开。
 - **series**  
-  Set the series this ebook belongs to.
+  书的系列。
 - **rating**  
-  Set the rating. Should be a number between 1 and 5.
+  书的评价。应该是 1 到 5 之间的数字。
 - **include_toc**  
-  `default: true` Whether or not to include the TOC you wrote in your entry file.
+  `默认：true` 是否包含主文件中所写的目录（TOC）。
 
-For example:
+例如：
 
 ```yaml
 ebook:
@@ -113,29 +112,29 @@ ebook:
   rating: 5
 ```
 
-### Feel and Look
+### 感觉和外观
 
-The following options are provided to help control the look and feel of the output
+下面的选项帮助你设置输出的电子书的外观：
 
 - **asciiize** `[true/false]`  
-  `default: false`, Transliterate unicode characters to an ASCII representation. Use with care because this will replace unicode characters with ASCII
+  `默认：false`, 是否将 unicode 字符转化为 ASCII 。请小心使用这一选项因为这将会将 unicode 字符转化为 ASCII。
 - **base-font-size** `[number]`  
-  The base font size in pts. All font sizes in the produced book will be rescaled based on this size. By choosing a larger size you can make the fonts in the output bigger and vice versa. By default, the base font size is chosen based on the output profile you chose.
+  基本字体大小，单位 pts。所有的字体大小将会根据这个基本字体大小进行缩放。选择大的字体意味着你输出的内容的字体会更大。默认下，基本字体大小和你的 profile 设置中的相同。
 - **disable-font-rescaling** `[true/false]`  
-  `default: false` Disable all rescaling of font sizes.
+  `默认：false` 禁掉所有字体的缩放。
 - **line-height** `[number]`  
-  The line height in pts. Controls spacing between consecutive lines of text. Only applies to elements that do not define their own line height. In most cases, the minimum line height option is more useful. By default no line height manipulation is performed.
+  行间距，单位 pts。用于控制行与行之间的空隙大小。这个选项仅仅作用于没有定义自己行间距的元素。在普遍情况下，小的行间距是最有用的。默认下，没有行间距的操作。
 - **margin-top** `[number]`  
-  `default: 72.0` Set the top margin in pts. Default is 72. Setting this to less than zero will cause no margin to be set (the margin setting in the original document will be preserved). Note: 72 pts equals 1 inch
+  `默认：72.0` Set the top margin in pts. Default is 72. Setting this to less than zero will cause no margin to be set (the margin setting in the original document will be preserved). Note: 72 pts equals 1 inch
 - **margin-right** `[number]`  
-  `default: 72.0`
+  `默认：72.0`
 - **margin-bottom** `[number]`  
-  `default: 72.0`
+  `默认：72.0`
 - **margin-left** `[number]`  
-  `default: 72.0`
+  `默认：72.0`
 - **margin** `[number/array]`  
-  `default: 72.0`  
-  You can define **margin top/right/bottom/left** at the same time. For example:
+  `默认：72.0`  
+  你也可以同时定义 **margin top/right/bottom/left**。例如：
 
 ```yaml
 ebook:
@@ -152,7 +151,7 @@ ebook:
   margin: [1, 2, 3, 4] # margin-top=1, margin-right=2, margin-bottom=3, margin-left=4
 ```
 
-For example:
+例如：
 
 ```yaml
 ebook:
@@ -161,13 +160,14 @@ ebook:
   margin: 72
 ```
 
-## Output Formats
+## 输出类型
 
-Right now you can output ebook in format of `ePub`, `mobi`, `pdf`, `html`.
+目前你可以输出以下类型的电子书：  
+`ePub`, `mobi`, `pdf`, `html`。
 
 ### ePub
 
-To configure `ePub` output, simply add `epub` after `ebook`.
+要设置 `ePub` 的输出，添加 `epub` 在 `ebook` 之后。
 
 ```yaml
 ---
@@ -179,18 +179,18 @@ ebook:
 
 ```
 
-the following options are provided:
+可进行的设置如下：
 
 - **no-default-epub-cover** `[true/false]`  
-  Normally, if the input file has no cover and you don't specify one, a default cover is generated with the title, authors, etc. This option disables the generation of this cover.
+  通常情况下，如果你没有提供书籍的封面 `(cover)`，那么我们会自动为你生成一个包含书名，作者名等的封面。禁用这个选项将会禁止自动生成封面。
 - **no-svg-cover** `[true/false]`  
-  Do not use SVG for the book cover. Use this option if your EPUB is going to be used on a device that does not support SVG, like the iPhone or the JetBook Lite. Without this option, such devices will display the cover as a blank page.
+  不使用 SVG 作为书籍封面。启用这个选项如果你的 EPUB 将会被用于不支持 SVG 的设备，例如 iPhone 或者 JetBook Lite。没有这个选项，上述的设备将会显示空白页。
 - **pretty-print** `[true/false]`  
-  If specified, the output plugin will try to create output that is as human readable as possible. May not have any effect for some output plugins.
+  如果启用了这个选项，那么输出插件将会尽可能的生成人类可读的文档。可能对其他一些插件没作用。
 
 ### PDF
 
-To configure `pdf` output, simply add `pdf` after `ebook`.
+要设置 `ePub` 的输出，添加 `pdf` 在 `ebook` 之后。
 
 ```yaml
 ebook:
@@ -200,27 +200,27 @@ ebook:
     header-template: "<span> Written by shd101wyy _PAGENUM_ </span>"
 ```
 
-the following options are provided:
+可进行的设置如下：
 
 - **paper-size**  
-  The size of the paper. This size will be overridden when a non default output profile is used. Default is letter. Choices are `a0`, `a1`, `a2`, `a3`, `a4`, `a5`, `a6`, `b0`, `b1`, `b2`, `b3`, `b4`, `b5`, `b6`, `legal`, `letter`
+  纸张的大小。这个选项将会覆盖掉默认 profile 中的大小。默认是 letter。可选的选项有：`a0`，`a1`，`a2`，`a3`，`a4`，`a5`，`a6`，`b0`，`b1`，`b2`，`b3`，`b4`，`b5`，`b6`，`legal`，`letter`
 - **default-font-size** `[number]`  
-  The default font size
+  默认字体大小
 - **footer-template**  
-  An HTML template used to generate footers on every page. The strings `_PAGENUM_`, `_TITLE_`, `_AUTHOR_` and `_SECTION_` will be replaced by their current values.
+  为每个页面的 footer 的模版。字符串 `_PAGENUM_`，`_TITLE_`，`_AUTHOR_` 已经 `_SECTION_` 将会被相应的值替代。
 - **header-template**  
-  An HTML template used to generate headers on every page. The strings `_PAGENUM_`, `_TITLE_`, `_AUTHOR_` and `_SECTION_` will be replaced by their current values.
+  为每个页面的 header 的模版。字符串 `_PAGENUM_`，`_TITLE_`，`_AUTHOR_` 已经 `_SECTION_` 将会被相应的值替代。
 - **page-numbers** `[true/false]`  
-  `default: false`  
-  Add page numbers to the bottom of every page in the generated PDF file. If you specify a footer template, it will take precedence over this option.
+  `默认：false`  
+  添加页码到每一页的底部。如果你定义了 `footer-template`，那么 `footer-template` 会先被处理。
 - **pretty-print** `[true/false]`  
-  If specified, the output plugin will try to create output that is as human readable as possible. May not have any effect for some output plugins.
+  如果启用了这个选项，那么输出插件将会尽可能的生成人类可读的文档。可能对其他一些插件没作用。
 
 ### HTML
 
-Exporting `.html` doesn't depend on `ebook-convert`.  
-If you are exporting `.html` file, then all local images will be included as `base64` data inside a single `html` file.  
-To configure `html` output, simply add `html` after `ebook`.
+导出 `.html` 不依赖于 `ebook-convert`.  
+如果你要导出 `.html` 文件，那么所有的本地图片都将会被引用为 `base64` 数据到一个 `html` 文件中。  
+要设置 `html` 的输出，添加 `html` 在 `ebook` 之后。
 
 ```yaml
 ebook:
@@ -229,11 +229,12 @@ ebook:
 ```
 
 - **cdn**  
-  Load css and javascript files from `cdn.js`. This option is only used when exporting `.html` file.
+  是否从 `cdn.js` 读取 css 和 javascript 文件。
 
-## ebook-convert Arguments
+## ebook-convert 参数
 
-If there are `ebook-convert` features you want to use that lack equivalents in the YAML options described above you can still use them by passing custom `args`. For example:
+如果这里有 `ebook-convert` 的一些你想要使用的特性，但是上面没有提到，你依旧可以在 `args` 中使用它们。  
+例如：
 
 ```yaml
 ---
@@ -244,9 +245,9 @@ ebook:
 
 ```
 
-You can find a list of arguments in [ebook-convert manual](https://manual.calibre-ebook.com/generated/en/ebook-convert.html).
+你可以在 [ebook-convert 手册](https://manual.calibre-ebook.com/generated/en/ebook-convert.html) 中找到一系列的参数。
 
-## Export on save
+## 保存时自动导出
 
 Add the front-matter like below:
 
@@ -263,13 +264,13 @@ export_on_save:
 ---
 ```
 
-So the ebooks will be generated every time you save your markdown source file.
+这样当你保存你的 markdown 文件时，电子书将会被自动导出。
 
-## Known Issues & Limitations
+## 已知问题 & 局限
 
-- eBook generation is still under development.
-- All SVG graph generated by `mermaid`, `PlantUML`, etc will not work in the ebook generated. Only `viz` works.
-- Only **KaTeX** can be used for Math Typesetting.  
-  And the generated ebook file doesn't render math expression properly in **iBook**.
-- **PDF** and **Mobi** generation is buggy.
-- **Code Chunk** doesn't work with Ebook generation.
+- 这个特性还在开发中。
+- 所有由 `mermaid`，`PlantUML`，等 生成的 SVG 图像将不会在电子书中工作。只有 `viz` 没问题。
+- 只有 **KaTeX** 可以在电子书中使用。  
+  生成的电子书中的数学表达式无法在 **iBook** 显示。
+- **PDF** 以及 **Mobi** 导出有些问题。
+- **Code Chunk** 无法在电子书中工作。

@@ -1,8 +1,8 @@
-# Word Document
+# Word 文档
 
-## Overview
+## 概览
 
-To create a Word document, you need to specify the word_document output format in the front-matter of your document:
+创建 Word 文档，你需要在 markdown 文件中的 front-matter 里声明 `word_document` 的输出类型：
 
 ```yaml
 ---
@@ -14,9 +14,9 @@ output: word_document
 
 ```
 
-## Export Path
+## 输出路径
 
-You can define the document export path by specifying `path` option. For example:
+你可以通过 `path` 来定义文档的输出路径。例如：
 
 ```yaml
 ---
@@ -28,11 +28,11 @@ output:
 
 ```
 
-If `path` is not defined, then document will be generated under the same directory.
+如果 `path` 没有被定义，那么 Word 将会在相同的文件夹下生成。
 
 ## Syntax Highlighting
 
-You can use the `highlight` option to control the syntax highlighting theme. For example:
+你可以使用 `highlight` 选项来控制语法高亮的主题。例如：
 
 ```yaml
 ---
@@ -75,7 +75,7 @@ output:
 
 ## Shared Options
 
-If you want to specify a set of default options to be shared by multiple documents within a directory you can include a file named `_output.yaml` within the directory. Note that no YAML delimiters or enclosing output object are used in this file. For example:
+If you want to specify a set of default options to be shared by multiple documents within a directory you can include a file named `_output.yaml` within the directory. Note that no YAML delimeters or enclosing output object are used in this file. For example:
 
 **\_output.yaml**
 

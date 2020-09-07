@@ -1,12 +1,8 @@
 # Code Chunk
 
-**Changes might happen in the future.**
+**未来可能会有变动**
 
-**Markdown Preview Enhanced** allows you to render code output into documents.
-
-    ```bash {cmd}
-    ls .
-    ```
+**Markdown Preview Enhanced** 支持渲染代码的运行结果。
 
     ```bash {cmd=true}
     ls .
@@ -17,52 +13,53 @@
     console.log(date.toString())
     ```
 
-> ⚠️ **Script execution is off by default and needs to be explicitly enabled in Atom package / VSCode extension preferences**
+> ⚠️ **脚本运行默认是禁用的并且需要在 Atom 和 VSCode 的插件设置中开启来进行使用**
 >
-> Please use this feature with caution because it may put your security at risk!
-> Your machine can get hacked if someone makes you open a markdown with malicious code while script execution is enabled.
+> 请小心使用这一特性，因为它很有可能造成安全问题！
+> 当你的脚本运行设置是开启的，你的电脑很有可能被黑客攻击，如果有人使你运行了 Markdown 文档中的恶意代码。
 >
-> Option name: `enableScriptExecution`
+> 设置名称： `enableScriptExecution`
 
-## Commands & Keyboard Shortcuts
+## 命令 & 快捷键
 
-- `Markdown Preview Enhanced: Run Code Chunk` or <kbd>shift-enter</kbd>
-  execute single code chunk where your cursor is at.
-- `Markdown Preview Enhanced: Run All Code Chunks` or <kbd>ctrl-shift-enter</kbd>
-  execute all code chunks.
+- `Markdown Preview Enhanced: Run Code Chunk` 或者 <kbd>shift-enter</kbd>
+  运行你现在光标所在的一个 code chunk。
+- `Markdown Preview Enhanced: Run All Code Chunks` 或者 <kbd>ctrl-shift-enter</kbd>
+  运行所有的 code chunks。
 
-## Format
+## 格式
 
-You can configure code chunk options in format of <code>\`\`\`lang {cmd=your_cmd opt1=value1 opt2=value2 ...}</code>.
-When a value of an attribute is `true`, it can be omitted (e.g. `{cmd hide}` is identical to `{cmd=true hide=true}`).
+你可以通过以下形式来设置 code chunk：<code>\`\`\`lang {cmd=your_cmd opt1=value1 opt2=value2 ...}</code>。
+
+如果一个属性的值是 `true`，那么它可以被省略，（e.g. `{cmd hide}` 和 `{cmd=true hide=true}` 相同）。
 
 **lang**
-The grammar that the code block should highlight.
-It should be put at the most front.
+你想要代码所高亮的语言。
+这个是要被放在最前面的。
 
-## Basic Options
+## 基本设置
 
 **cmd**
-The command to run.
-If `cmd` is not provided, then `lang` will be regarded as command.
+将要被运行的命令。
+如果 `cmd` 没有被提供，那么 `lang` 将会被视作为命令。
 
-eg:
+例如：
 
-    ```python {cmd="/usr/local/bin/python3"}
-    print("This will run python3 program")
-    ```
+    	```python {cmd="/usr/local/bin/python3"}
+    	print("这个将会运行 python3 程序")
+    	```
 
 **output**
 `html`, `markdown`, `text`, `png`, `none`
 
-Defines how to render code output.
-`html` will append output as html.
-`markdown` will parse output as markdown. (MathJax and graphs will not be supported in this case, but KaTeX works)
-`text` will append output to a `pre` block.
-`png` will append output as `base64` image.
-`none` will hide the output.
+设置你想要如何显示你的代码结果。
+`html` 将会添加输出结果为 html。
+`markdown` 将会添加输出结果为 markdown。（MathJax 以及 graphs 在这种情况下是不被支持的）
+`text` 将会添加输出结果到 `pre` 块。
+`png` 将会添加输出结果到 `base64` 图片。
+`none` 将会隐藏输出结果。
 
-eg:
+例如：
 
     ```gnuplot {cmd=true output="html"}
     set terminal svg
@@ -77,31 +74,31 @@ eg:
 ![screen shot 2017-07-28 at 7 14 24 am](https://user-images.githubusercontent.com/1908863/28716734-66142a5e-7364-11e7-83dc-a66df61971dc.png)
 
 **args**
-args that append to command. eg:
+需要被添加到命令的 args 。 例如：
 
     ```python {cmd=true args=["-v"]}
     print("Verbose will be printed first")
     ```
 
     ```erd {cmd=true args=["-i", "$input_file", "-f", "svg"] output="html"}
-      # output svg format and append as html result.
+    # output svg format and append as html result.
     ```
 
 **stdin**
-If `stdin` is set to true, then the code will be passed as stdin instead of as file.
+如果 `stdin` 被设置为 true，那么代码将会被传递到 stdin 而不是作为文件。
 
 **hide**
-`hide` will hide code chunk but only leave the output visible. default: `false`
-eg:
+`hide` 将会隐藏代码块但是会显示运行结果，默认为 `false`。
+例如：
 
     ```python {hide=true}
     print('you can see this output message, but not this code')
     ```
 
 **continue**
-If set `continue=true`, then this code chunk will continue from the last code chunk.
-If set `continue=id`, then this code chunk will continue from the code chunk of id.
-eg:
+如果设置 `continue: true`，那么这个 code chunk 将会继续运行上一个 code chunk 的内容。
+如果设置`continue: id`，那么这个 code chunk 从拥有这个 id 的 code chunk 运行。
+例如：
 
     ```python {cmd=true id="izdlk700"}
     x = 1
@@ -116,38 +113,39 @@ eg:
     ```
 
 **class**
-If set `class="class1 class2"`, then `class1 class2` will be add to the code chunk.
+如果设置 `class="class1 class2"`，那么 `class1 class2` 将会被添加到 code chunk。
 
-- `line-numbers` class will show line numbers to code chunk.
+- `line-numbers` class 将会添加代码行数到 code chunk。
 
 **element**
-The element that you want to append after.
-Check the **Plotly** example below.
+你想要添加的元素。
+请查看下面的 **Plotly** 例子。
 
 **run_on_save** `boolean`
-Run code chunk when the markdown file is saved. Default `false`.
+当 markdown 文件被保存时，自动运行 code chunk。默认 `false`。
 
 **modify_source** `boolean`
-Insert code chunk output directly into markdown source file. Default `false`.
+插入 code chunk 的运行结果直接到 markdown 文件。默认 `false`。
 
 **id**
-The `id` of the code chunk. This option would be useful if `continue` is used.
+Code chunk 的 `id`。这个选项可以配合 `continue` 选项使用。
 
-## Macro
+## 宏
 
 - **input_file**
-  `input_file` is automatically generated under the same directory of your markdown file and will be deleted after running code that is copied to `input_file`.
-  By default, it is appended at the very end of program arguments.
-  However, you can set the position of `input_file` in your `args` option by `$input_file` macro. eg:
+  `input_file` 将会拷贝你的 code chunk 中的代码，然后在你的 markdown 文件的目录下生成一个临时文件，并且会在 code chunk 运行结束后被自动删除。
+  默认条件下，它被作为程序运行的最后一个参数。
+  但是，如果你想要改变 `input_file` 在你的 `args` 中的位置，你可以使用 `$input_file` 宏。例如：
 
-      ```program {cmd=true args=["-i", "$input_file", "-o", "./output.png"]}
-      ...your code here
-      ```
+
+    ```program {cmd=true args=["-i", "$input_file", "-o", "./output.png"]}
+    ...your code here
+    ```
 
 ## Matplotlib
 
-If set `matplotlib=true`, then the python code chunk will plot graphs inline in the preview.
-eg:
+如果设置 `matplotlib=true`，那么你的 python code chunk 将会在你的预览中绘制图像。
+例如：
 
     ```python {cmd=true matplotlib=true}
     import matplotlib.pyplot as plt
@@ -159,53 +157,53 @@ eg:
 
 ## LaTeX
 
-Markdown Preview Enhanced also supports `LaTeX` compilation.
-Before using this feature, you need to have [pdf2svg](extra.md?id=install-svg2pdf) and [LaTeX engine](extra.md?id=install-latex-distribution) installed.
-Then you can simply write LaTeX in code chunk like this:
+Markdown Preview Enhanced 也支持 `LaTeX` 编译。
+在使用这个特性之前，你需要先安装好 [pdf2svg](zh-cn/extra.md?id=install-svg2pdf) 以及 [LaTeX engine](zh-cn/extra.md?id=install-latex-distribution)。
+然后你就可以很简单的利用 code chunk 编写 LaTeX 了：
 
     ```latex {cmd=true}
     \documentclass{standalone}
     \begin{document}
-      Hello world!
+       Hello world!
     \end{document}
     ```
 
 ![screen shot 2017-07-28 at 7 15 16 am](https://user-images.githubusercontent.com/1908863/28716762-8686d980-7364-11e7-9669-71138cb2e6e7.png)
 
-### LaTeX output configuration
+### LaTeX 输出设置
 
 **latex_zoom**
-If set `latex_zoom=num`, then the result will be scaled `num` times.
+如果设置了 `latex_zoom=num`，那么输出结果将会被缩放 `num` 倍。
 
 **latex_width**
-The width of result.
+输出结果的宽度。
 
 **latex_height**
-The height of result.
+输出结果的高度。
 
 **latex_engine**
-The latex engine that you used to compile `tex` file. By default `pdflatex` is used.
+就会被用来编译 `tex` 文件的 latex 引擎。默认下 `pdflatex` 是被使用的。你可以在 [插件设置](zh-cn/usages.md?id=package-settings) 中改变它的默认值。
 
-### TikZ example
+### TikZ 例子
 
-It is recommended to use `standalone` while drawing `tikz` graphs.
+推荐使用 `standalone` 绘制 `tikz` 图形。
+
 ![screen shot 2017-07-14 at 11 27 56 am](https://user-images.githubusercontent.com/1908863/28221069-8113a5b0-6887-11e7-82fa-23dd68f2be82.png)
 
 ## Plotly
 
-Markdown Preview Enhanced allows you to draw [Plotly](https://plot.ly/) easily.
-For example:
+Markdown Preview Enhanced 支持你轻松的绘制 [Plotly](https://plot.ly/) 图形。
+例如：
 ![screen shot 2017-10-20 at 10 41 25 am](https://user-images.githubusercontent.com/1908863/31829580-526a0c06-b583-11e7-82f2-09ea7a0b9672.png)
 
-- The first line `@import "https://cdn.plot.ly/plotly-latest.min.js"` uses the [file import](file-imports.md) functionality to import `plotly-latest.min.js` file.
-  However, it is recommended to download the js file to local disk for better performance.
-- Then we created a `javascript` code chunk.
+- 第一行中的 `@import "https://cdn.plot.ly/plotly-latest.min.js"` 使用了 [文件引用](zh-cn/file-imports.md) 的特性来引用 `plotly-latest.min.js` 文件。但是，引用本地的 js 文件是推荐的，因为这样更快。
+- 接着我们创建了 `javascript` code chunk.
 
 ## Demo
 
-This demo shows you how to render entity-relation diagram by using [erd](https://github.com/BurntSushi/erd) library.
+下面的例子展示了如何利用 [erd](https://github.com/BurntSushi/erd) 库绘制 ER diagram。
 
-    ```erd {cmd=true output="html" args=["-i", "$input_file" "-f", "svg"]}
+    ```erd {cmd=true output="html" args=["-i", "$input_file", "-f", "svg"]}
 
     [Person]
     *name
@@ -224,15 +222,15 @@ This demo shows you how to render entity-relation diagram by using [erd](https:/
 
 `erd {cmd=true output="html" args=["-i", "$input_file", "-f", "svg"]}`
 
-- `erd` the program that we are using. (_you need to have the program installed first_)
-- `output="html"` we will append the running result as `html`.
-- `args` field shows the arguments that we will use.
+- `erd` 是我们将要用到的程序。 (_当然你得先安装好这个程序_)
+- `output="html"` 意味着代码的输出结果将会被视作为 `html`。
+- `args` 显示了我们将要用到的参数。
 
-Then we can click the `run` button at the preview to run our code.
+接着我们点击 `运行`按钮来运行我们的代码。
 
 ![erd](https://user-images.githubusercontent.com/1908863/28221395-bcd0bd76-6888-11e7-8c6e-925e228d02cc.gif)
 
-## Showcases (outdated)
+## 展示
 
 **bash**
 ![Screen Shot 2016-09-24 at 1.41.06 AM](https://i.imgur.com/v5Y7juh.png)
@@ -240,9 +238,9 @@ Then we can click the `run` button at the preview to run our code.
 **gnuplot with svg output**
 ![Screen Shot 2016-09-24 at 1.44.14 AM](https://i.imgur.com/S93g7Tk.png)
 
-## Limitations
+## 局限
 
-- Doesn't work with `ebook` yet.
-- Might be buggy when using `pandoc document export`
+- 暂时不能在 `ebook` 工作。
+- `pandoc document export` 中可能会有问题。
 
-[➔ Presentation](presentation.md)
+[➔ 幻灯片制作](zh-cn/presentation.md)

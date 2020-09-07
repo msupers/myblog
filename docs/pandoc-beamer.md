@@ -1,10 +1,10 @@
-# Beamer Document
+# Beamer 文档
 
-## Overview
+## 概览
 
-To create a Beamer presentation from **Markdown Preview Enhanced**, you specify the `beamer_presentation` output format in the front-matter of your document.  
-You can create a slide show broken up into sections by using the `#` and `##` heading tags (you can also create a new slide without a header using a horizontal rule (`----`).  
-For example here’s a simple slide show:
+创建 Word 文档，你需要在 markdown 文件中的 front-matter 里声明 `beamer_presentation` 的输出类型：  
+你可以用 `#` 以及 `##` 来分隔幻灯片（你还可以通过使用分隔符 (`---`) 来插入新的幻灯片）。
+例如，下面是一个简单的例子：
 
 ```markdown
 ---
@@ -43,9 +43,9 @@ output: beamer_presentation
 - Count sheep
 ```
 
-## Export Path
+## 输出路径
 
-You can define the document export path by specifying `path` option. For example:
+你可以通过 `path` 来定义文档的输出路径。例如：
 
 ```yaml
 ---
@@ -57,7 +57,7 @@ output:
 
 ```
 
-If `path` is not defined, then document will be generated under the same directory.
+如果 `path` 没有被定义，那么文档将会在相同的文件夹下生成。
 
 ## Incremental Bullets
 
@@ -120,11 +120,11 @@ output:
 
 ```
 
-## Syntax Highlighting
+## 语法高亮
 
-The `highlight` option specifies the syntax highlighting style. Supported styles include “default”, “tango”, “pygments”, “kate”, “monochrome”, “espresso”, “zenburn”, and “haddock” (specify null to prevent syntax highlighting):
+`highlight` 选项定义了高亮的样式。支持的样式包括 “default”，“tango”，“pygments”，“kate”，“monochrome”，“espresso”，“zenburn”，以及 “haddock” （设置 null 来禁用语法高亮）：
 
-For example:
+例如：
 
 ```yaml
 ---
@@ -153,7 +153,7 @@ output:
 
 ## Shared Options
 
-If you want to specify a set of default options to be shared by multiple documents within a directory you can include a file named `_output.yaml` within the directory. Note that no YAML delimiters or enclosing output object are used in this file. For example:
+If you want to specify a set of default options to be shared by multiple documents within a directory you can include a file named `_output.yaml` within the directory. Note that no YAML delimeters or enclosing output object are used in this file. For example:
 
 **\_output.yaml**
 
