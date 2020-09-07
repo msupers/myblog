@@ -2,19 +2,16 @@
 
   - [简介](zh-cn/)
   - [使用](zh-cn/usages.md)
-  - 安装教程
-    - [Atom](zh-cn/installation.md)
-    - [VS Code](zh-cn/vscode-installation.md)
   
 - 工具链
 
-  - Jenkins
-    - [jenkins](zh-cn/jenkins.md)
-    - [gitlab](zh-cn/puppeteer.md)
-    - [jira](zh-cn/pdf.md)
-    - [eBook](zh-cn/ebook.md)
+  - **Jenkins**
+    - [简介](zh-cn/jenkins.md)
+    - [部署](zh-cn/puppeteer.md)
+    - [jenkins shared lib](zh-cn/pdf.md)
+    - [](zh-cn/ebook.md)
     - [Prince (PDF)](zh-cn/prince.md)
-  - Pandoc
+  - **[Pandoc]**
     - [PDF](zh-cn/pandoc-pdf.md)
     - [Word](zh-cn/pandoc-word.md)
     - [RTF](zh-cn/pandoc-rtf.md)
@@ -23,7 +20,7 @@
     - [Bibliographies and Citations](zh-cn/pandoc-bibliographies-and-citations.md)
   - [Markdown (GFM)](zh-cn/markdown.md)
 
-- 编写 Markdown
+- **[Markdown]**
 
   - [Markdown 基本要素](zh-cn/markdown-basics.md)
   - [数学](zh-cn/math.md)

@@ -1,14 +1,16 @@
 - 开始
 
   - [简介](zh-cn/)
+  - [使用](zh-cn/usages.md)
+  
+- 工具链
 
-- 文档导出
-
-  - [HTML](zh-cn/html.md)
-  - [Puppeteer](zh-cn/puppeteer.md)
-  - [PDF](zh-cn/pdf.md)
-  - [eBook](zh-cn/ebook.md)
-  - [Prince (PDF)](zh-cn/prince.md)
+  - Jenkins
+    - [jenkins](zh-cn/jenkins.md)
+    - [gitlab](zh-cn/puppeteer.md)
+    - [jira](zh-cn/pdf.md)
+    - [eBook](zh-cn/ebook.md)
+    - [Prince (PDF)](zh-cn/prince.md)
   - Pandoc
     - [PDF](zh-cn/pandoc-pdf.md)
     - [Word](zh-cn/pandoc-word.md)
@@ -28,6 +30,24 @@
   - [Code Chunk](zh-cn/code-chunk.md)
   - [幻灯片](zh-cn/presentation.md)
   - [Pandoc](zh-cn/pandoc.md)
+
+
+
+- 定制 & 扩展
+
+  - [自定义 CSS](zh-cn/customize-css.md)
+  - [扩展 Markdown Parser](zh-cn/extend-parser.md)
+  - [图片助手](zh-cn/image-helper.md)
+  - [开发者文档](developer.md)
+
+- Credits
+
+  - [Backers](backers.md)
+  - [Thanks](thanks.md)
+
+- [额外](zh-cn/extra.md)
+
+- [疑难解答](zh-cn/faq.md)
 
 - Changelog
 
